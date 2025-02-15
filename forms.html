@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET and POST Methods</title>
+</head>
+<body>
+    <h2>Form Submission using GET Method</h2>
+    <form action="action.php" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Submit (GET)</button>
+    </form>
+    
+    <h2>Form Submission using POST Method</h2>
+    <form action="action.php" method="post">
+        <label for="name_post">Name:</label>
+        <input type="text" id="name_post" name="name" required>
+        <br><br>
+        <label for="password_post">Password:</label>
+        <input type="password" id="password_post" name="password" required>
+        <br><br>
+        <button type="submit">Submit (POST)</button>
+    </form>
+</body>
+</html>
