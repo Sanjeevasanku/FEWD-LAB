@@ -6,43 +6,62 @@
     <title>My Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             text-align: center;
+            color: #333;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #007bff, #6610f2);
             color: white;
-            padding: 20px;
+            padding: 30px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         section {
             background: white;
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
         }
         h2 {
-            color: #333;
+            color: #007bff;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         ul li {
-            background: #ddd;
+            background: #f8f9fa;
             margin: 5px;
             padding: 10px;
             border-radius: 5px;
+            transition: 0.3s;
+        }
+        ul li:hover {
+            background: #e9ecef;
         }
         a {
             text-decoration: none;
             color: #007bff;
+            font-weight: bold;
+            transition: 0.3s;
         }
         a:hover {
             text-decoration: underline;
+            color: #0056b3;
+        }
+        .contact-info p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .contact-info p span {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -54,11 +73,7 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a third-year Computer Science and Engineering student with a strong interest in software development and problem
-            solving. I enjoy working with C++, Java, and Python, constantly exploring ways to build efficient and scalable solutions. I
-             thrive in collaborative environments, whether it's brainstorming ideas with a team or tackling challenges in coding
-             discussions. I'm always eager to learn and adapt to new technologies, looking for opportunities where I can apply my skills,
-             grow as a developer, and make a meaningful impact.</p>
+        <p>I'm a third-year Computer Science and Engineering student with a strong interest in software development and problem solving. I enjoy working with C++, Java, and Python, constantly exploring ways to build efficient and scalable solutions. I thrive in collaborative environments, whether it's brainstorming ideas with a team or tackling challenges in coding discussions. I'm always eager to learn and adapt to new technologies, looking for opportunities where I can apply my skills, grow as a developer, and make a meaningful impact.</p>
     </section>
     
     <section id="skills">
@@ -73,10 +88,9 @@
     <section id="projects">
         <h2>Projects & Work Experience</h2>
         <ul>
-            <li><a href="https://github.com/yourusername/project1">Fitness Application using python</a></li>
-            <li><a href="https://github.com/yourusername/project2">An online platform for students to upload and review projects
-                from various universities.</a></li>
-            <li><a href="https://github.com/yourusername/project3">Saanjh Sahayak </a></li>
+            <li><a href="https://github.com/yourusername/project1">Fitness Application using Python</a></li>
+            <li><a href="https://github.com/yourusername/project2">An online platform for students to upload and review projects from various universities.</a></li>
+            <li><a href="https://github.com/yourusername/project3">Saanjh Sahayak</a></li>
         </ul>
     </section>
     
@@ -91,14 +105,16 @@
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li>B.Tech in Computer Science,  Keshav Memorial Institute Of Technology (2026)</li>
+            <li>B.Tech in Computer Science, Keshav Memorial Institute Of Technology (2026)</li>
         </ul>
     </section>
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: sanjeevasanku1@gmail.com</p>
-        <p>Phone: +91 7337439091</p>
+        <div class="contact-info">
+            <p><span>Email:</span> sanjeevasanku1@gmail.com</p>
+            <p><span>Phone:</span> +91 7337439091</p>
+        </div>
     </section>
 </body>
 </html>
