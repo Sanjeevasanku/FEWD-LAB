@@ -22,6 +22,10 @@
             background-color: #333;
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
         .nav-menu a {
             color: white;
@@ -59,6 +63,29 @@
         .specialties ol {
             list-style-type: upper-roman;
         }
+
+        .dropdown {
+            cursor: pointer;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: white;
+            box-shadow: 0px 4px 8px gray;
+            min-width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown-content ul {
+            padding: 0;
+            list-style: none;
+        }
+        .dropdown-content ul li {
+            padding: 5px 0;
+        }
+        .dropdown-content ul li:hover {
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
@@ -71,13 +98,62 @@
     </div>
     
     <h2 style="text-align: center;">Our Specialties</h2>
-    <div class="specialties">
+    <!-- <div class="specialties">
         <ol>
             <li>Italian Cuisine</li>
             <li>Indian Delicacies</li>
             <li>Chinese Favorites</li>
             <li>Mexican Spices</li>
             <li>French Desserts</li>
+        </ol>
+    </div> -->
+    <div class="specialties">
+        <ol>
+            <li class="dropdown" onclick="toggleDropdown('italian')">Italian Cuisine
+                <div id="italian" class="dropdown-content">
+                    <ul>
+                        <li>Margherita Pizza</li>
+                        <li>Pasta Alfredo</li>
+                        <li>Bruschetta</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown('indian')">Indian Delicacies
+                <div id="indian" class="dropdown-content">
+                    <ul>
+                        <li>Butter Chicken</li>
+                        <li>Paneer Tikka</li>
+                        <li>Biryani</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown('chinese')">Chinese Favorites
+                <div id="chinese" class="dropdown-content">
+                    <ul>
+                        <li>Szechuan Noodles</li>
+                        <li>Spring Rolls</li>
+                        <li>Fried Rice</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown('mexican')">Mexican Spices
+                <div id="mexican" class="dropdown-content">
+                    <ul>
+                        <li>Tacos</li>
+                        <li>Quesadillas</li>
+                        <li>Nachos</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDropdown('french')">French Desserts
+                <div id="french" class="dropdown-content">
+                    <ul>
+                        <li>Macarons</li>
+                        <li>Crème Brûlée</li>
+                        <li>Croissant</li>
+                    </ul>
+                </div>
+            </li>
         </ol>
     </div>
     
@@ -88,21 +164,96 @@
             <th>Price</th>
             <th>Description</th>
         </tr>
-        <tr class="menu-item">
-            <td>Margherita Pizza</td>
-            <td>₹550</td>
-            <td>Classic Italian pizza with fresh basil and mozzarella.</td>
-        </tr>
-        <tr class="menu-item">
-            <td>Butter Chicken</td>
-            <td>₹350</td>
-            <td>Creamy Indian-style chicken curry with rich spices.</td>
-        </tr>
-        <tr class="menu-item">
-            <td>Szechuan Noodles</td>
-            <td>₹300</td>
-            <td>Spicy Chinese noodles with fresh vegetables.</td>
-        </tr>
+        <!-- Italian Cuisine -->
+    <tr class="menu-item">
+        <td>Margherita Pizza</td>
+        <td>₹550</td>
+        <td>Classic Italian pizza with fresh basil and mozzarella.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Pasta Alfredo</td>
+        <td>₹550</td>
+        <td>Creamy pasta with a rich Alfredo sauce.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Bruschetta</td>
+        <td>₹300</td>
+        <td>Grilled bread topped with fresh tomatoes and basil.</td>
+    </tr>
+    
+    <!-- Indian Delicacies -->
+    <tr class="menu-item">
+        <td>Butter Chicken</td>
+        <td>₹350</td>
+        <td>Creamy Indian-style chicken curry with rich spices.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Paneer Tikka</td>
+        <td>₹250</td>
+        <td>Grilled paneer cubes marinated in Indian spices.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Biryani</td>
+        <td>₹400</td>
+        <td>Flavored rice cooked with aromatic spices and choice of meat or veggies.</td>
+    </tr>
+    
+    <!-- Chinese Favorites -->
+    <tr class="menu-item">
+        <td>Szechuan Noodles</td>
+        <td>₹300</td>
+        <td>Spicy Chinese noodles with fresh vegetables.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Spring Rolls</td>
+        <td>₹200</td>
+        <td>Crispy rolls filled with veggies and served with tangy sauce.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Fried Rice</td>
+        <td>₹300</td>
+        <td>Classic stir-fried rice with vegetables or chicken.</td>
+    </tr>
+    
+    <!-- Mexican Spices -->
+    <tr class="menu-item">
+        <td>Tacos</td>
+        <td>₹300</td>
+        <td>Soft or crunchy shells filled with seasoned meat and toppings.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Quesadillas</td>
+        <td>₹350</td>
+        <td>Grilled tortillas filled with cheese and vegetables.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Nachos</td>
+        <td>₹200</td>
+        <td>Crispy tortilla chips topped with cheese and salsa.</td>
+    </tr>
+    
+    <!-- French Desserts -->
+    <tr class="menu-item">
+        <td>Macarons</td>
+        <td>₹200</td>
+        <td>Delicate and colorful French almond cookies.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Crème Brûlée</td>
+        <td>₹350</td>
+        <td>Rich custard dessert with caramelized sugar crust.</td>
+    </tr>
+    <tr class="menu-item">
+        <td>Croissant</td>
+        <td>₹250</td>
+        <td>Flaky and buttery French pastry.</td>
+    </tr>
     </table>
+    <script>
+        function toggleDropdown(id) {
+            let dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
