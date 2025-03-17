@@ -25,27 +25,23 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
 
-                <!-- Search Bar -->
                 <form class="d-flex me-3" role="search" onsubmit="return searchProducts()">
                     <input class="form-control me-2" type="search" id="searchInput" placeholder="Search products..."
                         aria-label="Search" required>
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
 
-                <!-- Login Button -->
                 <button class="btn" style="background-color: #b882ed; color: #000;" data-bs-toggle="modal"
                     data-bs-target="#loginModal">Login</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="text-white text-center py-5" style="background-color: #b882ed;">
         <h1>Our Products</h1>
         <p>Browse our top-quality items and shop with confidence</p>
     </header>
 
-    <!-- Products Section -->
     <div class="container my-5">
         <h2 class="text-center mb-4">Featured Products</h2>
         <div class="row">
@@ -166,7 +162,6 @@
             let email = document.getElementById("email");
             let password = document.getElementById("password");
 
-            // Simple validation check
             if (!email.checkValidity()) {
                 email.classList.add("is-invalid");
                 event.preventDefault();
@@ -182,13 +177,12 @@
             }
         });
     </script>
-    <!-- Scroll to Top Button -->
+
     <button id="scrollTopBtn" class="btn btn-primary" onclick="scrollToTop()"
         style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; background-color: #b882ed; border: none;">
         Back to Top
     </button>
 
-    <!-- JavaScript for Scroll to Top -->
     <script>
         window.onscroll = function () {
             let scrollButton = document.getElementById("scrollTopBtn");

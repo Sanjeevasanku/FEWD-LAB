@@ -25,33 +25,28 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
 
-                <!-- Search Bar -->
                 <form class="d-flex me-3" role="search" onsubmit="return searchProducts()">
                     <input class="form-control me-2" type="search" id="searchInput" placeholder="Search products..."
                         aria-label="Search" required>
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
 
-                <!-- Login Button -->
                 <button class="btn" style="background-color: #b882ed; color: #000;" data-bs-toggle="modal"
                     data-bs-target="#loginModal">Login</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="text-white text-center py-5" style="background-color: #b882ed;">
         <h1>Our Trusted Partners</h1>
         <p>We collaborate with top brands to bring you the best</p>
     </header>
 
-    <!-- Partners Section -->
     <div class="container my-5">
         <h2 class="text-center mb-4">Meet Our Partners</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card text-center">
-                    <!-- <img src="https://via.placeholder.com/300" class="card-img-top" alt="Partner 1"> -->
                     <div class="card-body">
                         <h5 class="card-title">Anita Dongre</h5>
                         <p class="card-text">A leading brand in the industry.</p>
@@ -60,7 +55,6 @@
             </div>
             <div class="col-md-4">
                 <div class="card text-center">
-                    <!-- <img src="https://via.placeholder.com/300" class="card-img-top" alt="Partner 2"> -->
                     <div class="card-body">
                         <h5 class="card-title">Manish Malhotra</h5>
                         <p class="card-text">Trusted by millions worldwide.</p>
@@ -69,7 +63,6 @@
             </div>
             <div class="col-md-4">
                 <div class="card text-center">
-                    <!-- <img src="https://via.placeholder.com/300" class="card-img-top" alt="Partner 3"> -->
                     <div class="card-body">
                         <h5 class="card-title">Boat</h5>
                         <p class="card-text">Innovation and quality at its best.</p>
@@ -160,7 +153,6 @@
             let email = document.getElementById("email");
             let password = document.getElementById("password");
 
-            // Simple validation check
             if (!email.checkValidity()) {
                 email.classList.add("is-invalid");
                 event.preventDefault();
@@ -177,13 +169,11 @@
         });
     </script>
 
-    <!-- Scroll to Top Button -->
     <button id="scrollTopBtn" class="btn btn-primary" onclick="scrollToTop()"
         style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; background-color: #b882ed; border: none;">
         Back to Top
     </button>
 
-    <!-- JavaScript for Scroll to Top -->
     <script>
         window.onscroll = function () {
             let scrollButton = document.getElementById("scrollTopBtn");
